@@ -1,0 +1,46 @@
+<html>
+<style>
+
+div { width: 168px   }
+button { width: 40px; height: 40px; margin: 1px; padding: 1em; float: left  }
+input { float:left }
+.triple-width { width:124; height: 40px; margin: 1px;   }
+.double-width { width: 82px}
+</style>
+<script>
+
+function showNumber(number) {
+  document.getElementById('screen').value += number
+}
+
+function clearScreen() {
+  document.getElementById('screen').value = ""
+}
+
+function showOutcome(){
+  var outcome = eval(document.getElementById('screen').value)
+  document.getElementById('screen').value = outcome
+}
+</script>
+
+<body>
+<div>
+<input class="triple-width" id="screen">
+<button onclick="clearScreen()">Clr</button>
+<button onclick="showNumber(7)">7</button>
+<button onclick="showNumber(8)">8</button>
+<button onclick="showNumber(9)">9</button>
+<button onclick="showNumber('+')">+</button>
+<button onclick="showNumber(4)">4</button>
+<button onclick="showNumber(5)">5</button>
+<button onclick="showNumber(6)">6</button>
+<button onclick="showNumber('-')">-</button>
+<button onclick="showNumber(1)">1</button>
+<button onclick="showNumber(2)">2</button>
+<button onclick="showNumber(3)">3</button>
+<button onclick="showNumber('*')">*</button>
+<button onclick="showNumber(0)" class="double-width">0</button>
+<button onclick="showOutcome()">=</button>
+<button onclick="showNumber('/')">/</button>
+</div>
+</body>
